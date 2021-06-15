@@ -1,0 +1,20 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.request {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.req-nav {
+  width: 25%  !important;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.req-nav .nav-head {
+  background-color: chocolate;
+  width: 100%;
+}
+/*# sourceMappingURL=reqpage.css.map */

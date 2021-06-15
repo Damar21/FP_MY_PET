@@ -8,26 +8,45 @@
        <!-- Bootstrap CSS -->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/fontawesome/css/all.css">
        <title>Hello, world!</title>
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #f5f5f5;">
     <section class="login">    
-        <div style="width: 30%;" class="card rounded shadow p-3">
+        
+        <div style="width: 30%;">
+            <p class="mx-5" style="text-align: center; font-size: 36px;"  > My Pet </p>
+
+        <div  class="card rounded shadow p-3">
             <p class="mb-5" style="text-align: center; font-size: 24px;"  > Login Page </p>
-            <form action="">
-                <input type="text" placeholder="Username" class="form-control mb-3">
-                <input type="password" placeholder="Password" class="form-control mb-3">
+            <form id="login-frm" action="">
+                <input type="text" placeholder="Username" class="uname form-control mb-3">
+                <input type="password" placeholder="Password" class="pass form-control mb-3">
                 <div id="msg"></div>
-                <input type="text" value="login" class="btn form-control btn-primary">
+                <input type="submit" value="login" class="btn form-control btn-primary">
                 <p> or register <a href="register"> here </a></p>
             </form>
         </div>
+    </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/partial.js"></script> 
     <script>
+       $('#login-frm').submit(function(){
+            var uname = $('.uname').val();
+            var pass = $('.pass').val();
+            var data =  {};
+            data.email = uname;
+            data.password = pass;
+            console.log(data);
+            $.post("http://myfpapi.herokuapp.com/api/users/auth/", data, function(data, status, response){
+            console.log(response);
+            });
+            event.preventDefault();
+       }); 
+
         let err = {
             message: "error message"
         }
