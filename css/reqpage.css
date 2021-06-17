@@ -1,20 +1,31 @@
-body {
-  background-color: #f5f5f5;
+.req-content {
+  max-height: 100%;
 }
 
-.request {
-  overflow-x: hidden;
-  overflow-y: scroll;
+.req-user {
+  list-style-type: none;
 }
 
-.req-nav {
-  width: 25%  !important;
-  height: 100%;
-  background-color: #f5f5f5;
-}
-
-.req-nav .nav-head {
+.req-user li:hover {
   background-color: chocolate;
+}
+
+.date-proposal {
+  display: inline;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.button-acc {
+  float: right;
+}
+
+.proposal-footer {
+  position: absolute;
   width: 100%;
+  bottom: 0px;
+  left: 0;
+  padding: 20px;
 }
 /*# sourceMappingURL=reqpage.css.map */
