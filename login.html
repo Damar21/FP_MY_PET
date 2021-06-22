@@ -25,14 +25,14 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="./assets/css/login.css">
   <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body >
   
-
+  <div id="loading"></div>
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
@@ -85,15 +85,24 @@
        
 
   <!-- ======= Isi konten kalian disini ======= -->
-        <section style="margin-top: 100px;">
-            <div class="container" data-aos="fade-up">  <!-- bagian ini jangan dihapus-->    
+        
                 <!--lanjut tulis konten kalian dibawah ini-->
-                <div>
-                    <p> <strong>LOGIN</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam expedita debitis aut sed eum nisi impedit facere recusandae assumenda facilis corporis, atque, aliquid laborum nesciunt libero. Minima eius iste culpa.</p>
-                    <p> <strong>LOGIN</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam incidunt sit, quidem enim facere perferendis ea! Excepturi libero maxime et asperiores eum ipsam mollitia eius illum, delectus error animi numquam?</p>
-                </div>
-            </div>
-        </section>
+                <section class="login">    
+        
+                  <div style="width: 30%;">   
+                  <div  class="card rounded shadow p-3">
+                      <p class="mb-5" style="text-align: center; font-size: 24px;"  > Login Page </p>
+                      <form id="login-frm" action="">
+                          <input type="text" placeholder="Username" class="uname form-control mb-3">
+                          <input type="password" placeholder="Password" class="pass form-control mb-3">
+                          <div id="msg"></div>
+                          <input type="submit" value="login" class="btn form-control btn-primary">
+                          <p> or register <a href="register"> here </a></p>
+                      </form>
+                  </div>
+              </div>
+              </section>
+                    
   <!-- End konten-->
 
  
@@ -208,7 +217,7 @@
   </nav>
 
   <div id="preloader"></div>
-
+ 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -222,11 +231,12 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>   
   <script src="assets/js/typed.js"></script>
-  <script src="assets/js/json.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <!--  Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+  <script src="assets/js/partial.js"></script>
+  <script src="assets/js/login.js"></script>
 </body>
 
 </html>

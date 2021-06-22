@@ -65,6 +65,7 @@
           <li><a href="artikel.html">Artikel</a></li>
           <li><a href="user_profil.html">Akun</a></li>
           <a style="margin-top: 10px; margin-left: 10px;" href="login.html"><button class="btn  btn-sm tombol">MASUK</button></a>
+          <button id="logout" class="btn  btn-sm tombol">Logout</button>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -259,10 +260,48 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>   
   <script src="assets/js/typed.js"></script>
   <script src="assets/js/json.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
   <!--  Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/xhrequst.js"></script>
   <script>
+    console.log(localStorage.getItem("authtoken"));
+    var httpHeaderConfig = {
+    headers: {
+        Authorization: "Bearer " + localStorage.getItem("authtoken")
+    }
+    }
+
+    console.log(httpHeaderConfig);
+    $("#logout").click(function(){
+      console.log("please wait")
+    axios.get('http://localhost:4000/api/client/logout', httpHeaderConfig).then(function (response,data) {
+      console.log(response.data);
+     
+    }).catch(function (error) {
+        console.log(error.response);
+    })
+  });
+
+  console.log("please wait")
+    axios.get('http://localhost:4000/api/pets', httpHeaderConfig).then(function (response,data) {
+      console.log(response.data);
+     
+    }).catch(function (error) {
+        console.log(error.response);
+    })
+
+    console.log("please wait")
+    $('#tes').click(function(){
+    axios.get('http://localhost:4000/api/specieses', httpHeaderConfig).then(function (response,data) {
+      console.log(response.data);
+     
+    }).catch(function (error) {
+        console.log(error.response);
+    })
+  });
   </script>
 
 </body>

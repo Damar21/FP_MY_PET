@@ -1,0 +1,35 @@
+.signup{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.note-box{
+    padding-left: 25px;
+    font-size: 12px;
+}
+
+.note-box-R{
+    padding-left: 25px;
+    font-size: 12px;
+    text-align: right;
+    margin: 2px;
+}
+
+.btn-child{
+    background-color: rgb(47, 156, 47);
+    padding: 0px;
+    font-size: 12px;
+}
+
+.fas{
+    cursor: pointer;
+}
